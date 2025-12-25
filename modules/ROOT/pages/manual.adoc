@@ -538,14 +538,36 @@ SW1 は Versal の起動モードを制御するための DIP スイッチです
 
 image::SW1.svg[SW1.svg]
 
-[width="100%",cols="1,1,1,1,2",options="header",]
+[width="100%",cols="1,1,1,1",options="header",]
 |===
-|MODE 0 |MODE 1 |MODE 2 |MODE 3 |起動モード
-|ON |ON |ON |ON |JTAG
-|ON |OFF |ON |ON |QSPI32 (NOR Flash)
-|OFF |OFF |ON |ON |SD v3.0 (microSDカード)
-4+|その他の設定 |禁止
+|
+| JTAG
+| QSPI32 (NOR Flash)
+| SD v3.0 (microSD)
+
+| MODE3
+| ON
+| ON
+| ON
+
+| MODE2
+| ON
+| ON
+| ON
+
+| MODE1
+| ON
+| OFF
+| OFF
+
+| MODE0
+| ON
+| ON
+| OFF
 |===
+
+
+上記以外のすべての組み合わせは、禁止されており、使用できません。
 
 === Versal POR 制御スイッチ (SW2)
 SW2 は Versal の External POR (Power On Reset) の制御が可能なタクトスイッチです。 +
