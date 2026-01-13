@@ -2,4 +2,12 @@
 
 = SC-OBC Module V1 Development Board Product Manual
 
-include::manual.adoc[]
+include::intro.adoc[]
+
+include::terms.adoc[]
+
+include::interface-spec.adoc[]
+
+include::interface-layout.adoc[]
+
+include::jumper-default.adoc[]

@@ -1,0 +1,39 @@
+== Jumper Default List
+[width="100%",cols="1,2,1",options="header",]
+|===
+|REF |Function |Default
+.3+|JP13~JP18 |Versal FPGA JTAG .3+|1-2
+|1-2 : FTDI |2-3 : FMC
+.3+|JP19~JP21 |Versal UART0 .3+|1-2
+|1-2 : MIO |2-3 : EMIO
+.3+|JP22~JP24 |Versal UART1 .3+|1-2
+|1-2 : MIO |2-3 : EMIO
+.3+|JP25~JP29 |IGLOO2 UART .3+|1-2
+|1-2 : FTDI |2-3 : RS422
+.5+|JP30~JP33 |RS422/RS485 TERM .5+|JP31 only
+|JP30 : Driver Termination Resistor
+|JP31 : Receiver Termination Resistor
+|JP32 : Short circuit between Y and A terminals
+|JP33 : Short circuit between Z and B terminals
+.3+|JP34 |CON6 HSDP EN .3+|ON
+|OFF : Disable ( Connect to FMC ) |ON : Enable
+.3+|JP35~JP37 |FMC I2C .3+|ON
+|OFF : Disable ( Connect only to CON12 ) |ON : Enable ( Connect to FMC )
+.5+|JP38~JP41 |Versal VCCO 502 .5+|JP40
+|JP38 : VDD_3V3_C |JP39 : VDD_3V3_M |JP40 : VDD_1V8_M |JP41 : VDD_1V2_M
+.3+|JP42~JP44 |CAN .3+|ON
+|OFF : Disable ( Connect only to CON12 ) |ON : Enable ( Connect to CON19 )
+.3+|JP45~JP46 |CAN TERM .3+|ON
+|OFF : OPEN Termination |ON : 120ohm Termination
+.3+|JP47 |Versal PMC MIO 0 DIR .3+|OFF
+|OFF : From CON12 to Versal |ON : From Versal to CON12
+.3+|JP48 |Versal PMC MIO 1 DIR .3+|OFF
+|OFF : From CON12 to Versal |ON : From Versal to CON12
+.5+|JP49~JP52 |Versal VCCO 302 .5+|JP49
+|JP49 : VDD_3V3_C |JP50 : VDD_3V3_M |JP51 : VDD_1V8_M |JP52 : VDD_1V2_M
+.5+|JP53~JP56 |IGLOO2 VDDI 5 .5+|JP53
+|JP53 : VDD_3V3_C |JP54 : VDD_3V3_M |JP55 : VDD_1V8_M |JP56 : VDD_1V2_M
+.3+|JP57~JP58 |FMC VADJ ( Versal VCCO 703 / IGLOO2 VDDI 8 ) .3+|JP58
+|JP57 : 1.2V |JP58 : 1.5V
+|===
+NOTE: ON : Insert Jumper / OFF : Remove Jumper
