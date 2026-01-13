@@ -1,5 +1,5 @@
-== インタフェース仕様
-=== インタフェースレイアウト (CON, LED, SW)
+= インタフェース仕様
+== インタフェースレイアウト (CON, LED, SW)
 
 image::Interface_Layout1.svg[Interface_Layout1.svg]
 
@@ -38,12 +38,12 @@ image::Interface_Layout1.svg[Interface_Layout1.svg]
 |LED6~LED9 |USER LED |LED (黄緑色) |
 |===
 
-=== OBC インタフェース (CON1)
+== OBC インタフェース (CON1)
 CON1 は OBC との接続インタフェースです。 +
 
 搭載コネクタ：SEAM-40-02.0-S-10-1-A-K-TR (Samtec)
 
-=== BPD 電源供給用インタフェース (CON2)
+== BPD 電源供給用インタフェース (CON2)
 CON2 は Versal の Battery Power Domain (BPD) に対し、電源を供給することが可能なインタフェースです。 +
 BPD は Real Time Clock (RTC) と Battery Backup RAM (BBRAM) を包括しています。 +
 RTC と BBRAM は、通常は OBC 内で生成される電圧 (VCCAUX_PMC_SMON) により動作していますが、OBC の主電源が切断された場合、CON2 から供給される電圧で維持、または保持されます。
@@ -55,7 +55,7 @@ RTC と BBRAM は、通常は OBC 内で生成される電圧 (VCCAUX_PMC_SMON) 
 |2 |GND |Power |VCC_BATT_IN |電源 (GND)
 |===
 
-=== CON18 信号線観測用インタフェース (CON3)
+== CON18 信号線観測用インタフェース (CON3)
 CON3 は CON18 に接続したデバイスとの通信信号をプローブで観測するためのインタフェースです。 +
 CON3 のピンアサインは、下表のように CON18 と同じピンアサインとなっています。 +
 信号線の詳細は CON18 の仕様を参照してください。
@@ -72,7 +72,7 @@ CON3 のピンアサインは、下表のように CON18 と同じピンアサ�
 |5 |GND |5
 |===
 
-=== IGLOO2 FPGA JTAG インタフェース (CON4)
+== IGLOO2 FPGA JTAG インタフェース (CON4)
 CON4 は IGLOO2 の FPGA JTAG インタフェースです。 +
 ピン配列は Microchip 社製の FPGA デバッカである FrashPro5 に対応しています。
 
@@ -100,7 +100,7 @@ CON4 は IGLOO2 の FPGA JTAG インタフェースです。 +
 |10 |GND |Power |VDD_1V8_M2GL_B4 |電源 (GND)
 |===
 
-=== IGLOO2 デバックインタフェース (CON5)
+== IGLOO2 デバックインタフェース (CON5)
 CON5 の Pin 2, 3 が IGLOO2 の UART に割り当てられており、Console として使用が可能です。 +
 Pin 1, 4 は IGLOO2 の Reserve ピンです。
 
@@ -113,7 +113,7 @@ Pin 1, 4 は IGLOO2 の Reserve ピンです。
 |4 |M2GL_RSVD3 |In/Out |VDD_1V8_M2GL_B4 |Reserve
 |===
 
-=== Versal / IGLOO2 デバックインタフェース (CON6)
+== Versal / IGLOO2 デバックインタフェース (CON6)
 CON6 は Versal 及び IGLOO2 のデバックインタフェースです。 +
 FTDI IC が搭載されており、以下のデバック方法の選択が可能です。
 
@@ -123,11 +123,11 @@ FTDI IC が搭載されており、以下のデバック方法の選択が可能
 
 また CON6 には、双方向高速マルチプレクサを経由して、Versal の 高速シリアル通信信号である GTYP が接続されており、Versal SmartLynq+ HSDP でのデバックも可能です。
 
-==== Versal FPGA JTAG
+=== Versal FPGA JTAG
 Versal の FPGA JTAG インタフェースです。 +
 JP13~JP18 に挿入されているジャンパーソケットを『FTDI』シルク側へ切り替えると、FTDI IC の Channel. A に接続され、利用が可能となります。
 
-==== Versal APU/RPU Console
+=== Versal APU/RPU Console
 Versal の APU/RPU のコンソールです。 +
 JP19~JP24 に挿入されているジャンパーソケットを切り替えることにより、FTDI IC へ  Versal の UART にマッピングされたシリアル通信信号が接続され、利用が可能となります。 +
 FTDI IC の Channel. B には Versal の UART0、Channel. C には UART1 が接続されます。 +
@@ -140,15 +140,15 @@ FTDI IC の Channel. B には Versal の UART0、Channel. C には UART1 が接�
 .2+|C .2+|UART1 |Versal LPD MIO |JP22~JP24: 1-2 |Versal HDIO |JP22~JP24: 2-3
 |===
 
-==== IGLOO2 Safety Processor Telemetry/Telecommand
+=== IGLOO2 Safety Processor Telemetry/Telecommand
 IGLOO2 の UART を利用し、OBC からの Telemetry 信号によるモニタ、または OBC への Telecommand 信号によるモード変更が可能です。 +
 JP25~JP29 に挿入されているジャンパーソケットを『FTDI』シルク側へ切り替えると、FTDI IC の Channel. D に接続され、利用が可能となります。
 
-==== Versal SmartLynq+ HSDP
+=== Versal SmartLynq+ HSDP
 Versal の HSDP (High-Speed Debug Port) を使用し、AMD社製 SmartLynq+ モジュールを介して高速デバックおよびトレースが可能です。 +
 JP34 へジャンパーソケットを挿入することで利用が可能となります。
 
-=== Versal Reserve インタフェース (CON7)
+== Versal Reserve インタフェース (CON7)
 CON7 には Versal PMC MIO 1 が接続されています。 +
 CON7 に繋がる MIO は、SD カードインタフェースとの間にレベルシフタを設ける場合、その通信方向を制御する目的で使用されます。 +
 Dev Board では、双方向通信が可能なレベルシフタを採用しており、本機能は不要となるため Reserve としています。
@@ -162,23 +162,23 @@ Dev Board では、双方向通信が可能なレベルシフタを採用して�
 |4 |NC |- |- |-
 |===
 
-=== microSD カードインタフェース (CON8)
+== microSD カードインタフェース (CON8)
 CON8 は microSD カードを挿入できるインタフェースです。 +
 開発の初期では、起動するためのソフトウェアを OBC 上の Flash メモリや eMMC ではなく、microSD カードに書き込んで使用することを想定しています。
 
-=== USB2.0 インタフェース (CON9)
+== USB2.0 インタフェース (CON9)
 CON9 は OBC を USB2.0 のホストとして利用可能なインタフェースです。 +
 CON9 から供給される電源である VBUS には、Dev Board の主電源から生成され、Load Switch を経由した +5V が使用されます。 +
 VBUS は USB2.0 に準拠しています。
 
-=== Gigabit Ethernet インタフェース (CON10)
+== Gigabit Ethernet インタフェース (CON10)
 CON10 は RJ45 型ジャックの Gigabit Ethernet インタフェースです。 +
 Versal の APU へ Linux OS をポーティングすることで、OBC へのリモートログインが可能となります。 +
 接続のリンクが確立した場合、CON10 に搭載されている緑色の LED が点灯します。 +
 また通信中は、同じく CON10 に搭載されている黄色の LED が点滅します。 +
 CON10 を使用する場合、Versal LPD MIO の電源ドメインが 1.8V 以上となるように JP38~JP41 を選択してください。
 
-=== FMC モジュール接続用インタフェース (CON11)
+== FMC モジュール接続用インタフェース (CON11)
 CON11 は、Versal PL または IGLOO2 の高速シリアル通信信号を評価する目的で、市販の FMC モジュールを接続することが可能なインタフェースです。 +
 接続を想定している FMC モジュールを以下に示します。
 
@@ -189,7 +189,7 @@ CON11 は、Versal PL または IGLOO2 の高速シリアル通信信号を評�
 
 搭載コネクタ：ASP-134486-01 (Samtec)
 
-=== Versal MIO 拡張インタフェース (CON12)
+== Versal MIO 拡張インタフェース (CON12)
 CON12 は、Versal PMC MIO 0 , Versal PMC MIO 1 , Versal LPD MIO の内、CON1 に接続され、かつ CON8 (microSD) , CON9 (USB2.0) , CON11 (Ethernet) で使用されていない MIO が接続されているインタフェースです。 +
 CON12 の Pin 1~8 に接続されている Versal LPD MIO は、ジャンパーソケットにより CON12 以外の回路へ接続が可能となるため注意が必要です。 +
 CON12 に接続されている電源 (VDD_B502) は Versal LPD MIO の電源ドメインにもなり、その電圧は JP38~JP41 で選択が可能です。 +
@@ -222,7 +222,7 @@ CON12 の Pin 13~14 に接続されている Versal PMC MIO 0 と Versal PMC MIO
 |20 |VDD_B502 |Power |VDD_B502 |電源 (VDD_B502)
 |===
 
-=== CON19 信号線観測用インタフェース (CON13)
+== CON19 信号線観測用インタフェース (CON13)
 CON13 は、CON19 に接続したデバイスとの通信信号をプローブで観測するためのインタフェースです。 +
 CON13 のピンアサインは、下表のように CON19 と同じピンアサインとなっています。 +
 信号線の詳細は CON19 の仕様を参照してください。
@@ -237,7 +237,7 @@ CON13 のピンアサインは、下表のように CON19 と同じピンアサ�
 |3 |GND |3
 |===
 
-=== Versal HDIO 拡張インタフェース (CON14)
+== Versal HDIO 拡張インタフェース (CON14)
 CON14 は Versal HDIO が接続されたインタフェースです。 +
 NC ピンを挟んで 12ピンずつの 3 Block に分かれており、それぞれの Block の列が PMOD のピン配列に対応しています。 +
 CON14 へ複数の PMOD を挿入した場合、PMOD 同士が互いに干渉しないよう NC ピンが挟まれています。 +
@@ -317,7 +317,7 @@ VDD_B302 には Load Switch が設けられており、Versal の主電源が切
 |===
 NOTE: 表に含まれていないピンは全て NC
 
-=== IGLOO2 MSIO (Bank 5) 拡張インタフェース (CON15)
+== IGLOO2 MSIO (Bank 5) 拡張インタフェース (CON15)
 CON15 は IGLOO2 MSIO (Bank 5) が接続されたインタフェースです。 +
 CON14 と同様に 12ピンずつの 3 Block に分かれており、それぞれの Block の列が PMOD のピン配列に対応しています。 +
 CON14 と同様、複数の PMOD を挿入した場合、PMOD 同士が互いに干渉しないよう Block を離していますが、 MSIO の本数が多いことから、CON14 では NC ピンであった Block の間にも MSIO を接続しています。 +
@@ -432,14 +432,14 @@ CON15 に接続されている電源 (VDD_M2GL_B5) は IGLOO2 MSIO (Bank 5) の�
 |48 |VDD_M2GL_B5 |Power |VDD_M2GL_B5 |電源 (VDD_M2GL_B5)
 |===
 
-=== Dev Board 主電源供給インタフェース (CON16)
+== Dev Board 主電源供給インタフェース (CON16)
 CON16 は Dev Board へ主電源を供給するためのインタフェースです。 +
 DC ジャックを採用しており、対応する AC アダプターのプラグ仕様は、外径 5.5mm、内径 2.1mm のセンタープラスです。 +
 CON16 を使用する場合、CON20 へ電圧を印加しないでください。
 
 搭載コネクタ：PJ-002AH (Same Sky)
 
-=== USER LED 制御インタフェース (CON17)
+== USER LED 制御インタフェース (CON17)
 CON17 はユーザーが任意で使用が可能な LED (USER LED) を制御できるインタフェースです。 +
 1つのピンに対して1つの LED が制御可能です。 +
 ピンに対し High レベルの信号を入力すると LED が点灯し、Low レベルを入力すると消灯します。 +
@@ -454,7 +454,7 @@ CON17 はユーザーが任意で使用が可能な LED (USER LED) を制御で�
 |4 |ULED4 |Input |LED9 の制御が可能
 |===
 
-=== IGLOO2 RS422/485 インタフェース (CON18)
+== IGLOO2 RS422/485 インタフェース (CON18)
 CON18 は、IGLOO2 の UART と RS-422/RS-485 規格で通信が可能なインタフェースです。 +
 JP25~JP29 に挿入されているジャンパーソケットを『RS422』シルク側へ切り替え、CON18 へ RS-422/RS-485 の規格に対応したデバイスを接続することで通信が可能となります。 +
 JP30~JP33 により、半二重または全二重の通信方式への切り替えや、終端抵抗の切り替えが可能となります。 +
@@ -470,7 +470,7 @@ JP30~JP33 により、半二重または全二重の通信方式への切り替�
 |5 |GND |Power |VDD_3V3_C |電源 (GND)
 |===
 
-=== CAN インタフェース (CON19)
+== CAN インタフェース (CON19)
 CON19 は CAN 通信のインタフェースです。 +
 CAN0 にマッピング可能な Versal LPD MIO が、CAN Transceiver により差動信号へ変換され CON19 へ接続されています。 +
 JP42~JP44 へジャンパーソケットを挿入することで利用が可能ですが、ここで使用している MIO は CON12 にも分岐しているため注意が必要です。 +
@@ -485,7 +485,7 @@ CON19 を使用する場合、Versal LPD MIO の電源ドメインが 1.8V 以�
 |3 |GND |Power |- |電源 (GND)
 |===
 
-=== Dev Board 主電源供給インタフェース (CON20)
+== Dev Board 主電源供給インタフェース (CON20)
 CON20 は、CON16 と同じく Dev Board の主電源を供給するためのインタフェースです。 +
 5mm ピッチの 2ピンの端子台を採用しています。 +
 CON20 を使用する場合、CON16 へ電圧を印加しないでください。
@@ -497,7 +497,7 @@ CON20 を使用する場合、CON16 へ電圧を印加しないでください�
 |2 |GND |Power |VIN |電源 (GND)
 |===
 
-=== Versal 起動モード制御スイッチ (SW1)
+== Versal 起動モード制御スイッチ (SW1)
 SW1 は Versal の起動モードを制御するための DIP スイッチです。
 
 [width="100%",cols="1,1,1,1,1",options="header",]
@@ -544,43 +544,43 @@ image::SW1.svg[SW1.svg]
 
 上記以外のすべての組み合わせは、禁止されており、使用できません。
 
-=== Versal POR 制御スイッチ (SW2)
+== Versal POR 制御スイッチ (SW2)
 SW2 は Versal の External POR (Power On Reset) の制御が可能なタクトスイッチです。 +
 工場出荷時にのみ使用することを想定しているため使用しないでください。
 
-=== IGLOO2 POR 制御スイッチ (SW3)
+== IGLOO2 POR 制御スイッチ (SW3)
 SW3 は IGLOO2 の POR (Power On Reset) の制御が可能なタクトスイッチです。 +
 工場出荷時にのみ使用することを想定しているため使用しないでください。
 
-=== Dev Board 主電源切り替えスイッチ (SW4)
+== Dev Board 主電源切り替えスイッチ (SW4)
 SW4 は Dev Board の主電源の ON/OFF の切り替えが可能なスライドスイッチです。 +
 『ON』シルク側へトグルを移動させることで主電源が回路へ供給され、『OFF』シルク側へ移動させることで供給を切断することが可能です。
 
 image::SW4.svg[SW4.svg]
 
-=== Versal 起動状態インジケータ (LED1)
+== Versal 起動状態インジケータ (LED1)
 LED1 は Versal の起動状態を示す黄緑色のインジケータです。 +
 POR (Power On Reset) により消灯し、PMC Start-up Flowchart に従って起動が正常に完了した場合に点灯します。
 
-=== Versal エラー状態インジケータ (LED2)
+== Versal エラー状態インジケータ (LED2)
 LED2 は Versal のエラーの発生状態を示す赤色のインジケータです。 +
 正常に動作している場合は消灯し、エラーが発生した場合に点灯します。
 
-=== 1Gbps Ethernet リンク状態インジケータ (LED3)
+== 1Gbps Ethernet リンク状態インジケータ (LED3)
 LED3 は CON10 での通信状態を示すインジケータです。 +
 1Gbps での Ethernet 通信が確立した場合に点灯します。 +
 10Mbps, 100Mbps の場合は消灯します。
 
-=== FMC モジュール電源供給インジケータ (LED4)
+== FMC モジュール電源供給インジケータ (LED4)
 LED4 は FMC モジュールへの電源供給の状態を示す黄緑色のインジケータです。 +
 Dev Board から OBC へ電源が供給され、Versal の起動が完了し、FMC モジュールへの電源が正常に供給された場合、点灯します。
 
-=== Dev Board 主電源供給インジケータ (LED5)
+== Dev Board 主電源供給インジケータ (LED5)
 LED5 は主電源の供給状態を示す黄緑色のインジケータです。 +
 CON16 または CON20 から主電源が正常に供給された場合に点灯します。 +
 SW4 のトグルが『OFF』シルク側へ移動された場合、消灯します。 +
 また主電源に約 5A 以上の電流が流れた場合も消灯します。
 
-=== USER LED (LED6~LED9)
+== USER LED (LED6~LED9)
 LED6~LED9 はユーザーが任意で使用が可能な黄緑色の LED です。 +
 詳細は CON17 を参照してください。

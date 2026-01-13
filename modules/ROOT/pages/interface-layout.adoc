@@ -1,4 +1,4 @@
-== インタフェースレイアウト (JP)
+= インタフェースレイアウト (JP)
 
 image::Interface_Layout2.svg[Interface_Layout2.svg]
 
@@ -21,7 +21,7 @@ image::Interface_Layout2.svg[Interface_Layout2.svg]
 |JP57~JP58 |FMC モジュール I/O電圧セレクタ |ピンヘッダ 4ピン (2ピン x 2列 / 2.54mm ピッチ)
 |===
 
-=== Versal JTAG セレクタ (JP13~JP18)
+== Versal JTAG セレクタ (JP13~JP18)
 JP13~JP18 は Versal FPGA JTAG インタフェースの接続先を切り替えることが可能なインタフェースです。 +
 ジャンパーソケットを Pin 1-2 間に挿入すると、FTDI IC の Channel. A へ接続され、CON6 (USB Type.C) からアクセスが可能となります。 +
 また Pin 2-3 間に挿入することで、レベルシフタ (IC22, IC23) を介して、CON11 に接続した FMC モジュールと通信が可能となります。 +
@@ -41,7 +41,7 @@ image::JP13.svg[JP13.svg]
 |JP18 |VDD_FTDI_JTAG |VDD_1V8_B503 |VDD_FMC_JTAG |Power
 |===
 
-=== Versal APU/RPU Console (UART0) セレクタ (JP19~JP21)
+== Versal APU/RPU Console (UART0) セレクタ (JP19~JP21)
 JP19~JP21 は、FTDI IC の Channel. B への接続先の切り替えが可能なインタフェースです。 +
 ジャンパーソケットを Pin 1-2 間へ挿入すると、Versal LPD MIO にマッピングされた UART0 と接続されます。 +
 また Pin 2-3 間へ挿入することで、Versal HDIO にマッピングされた UART0 (EMIO)へ接続されます。 +
@@ -60,7 +60,7 @@ image::JP19.svg[JP19.svg]
 |===
 NOTE: VDD : Power / RXD : Input / TXD : Output
 
-=== Versal APU/RPU Console (UART1) セレクタ (JP22~JP24)
+== Versal APU/RPU Console (UART1) セレクタ (JP22~JP24)
 JP22~JP24 は、FTDI IC の Channel. C への接続先の切り替えが可能なインタフェースです。 +
 ジャンパーソケットを Pin 1-2 間へ挿入すると、Versal LPD MIO にマッピングされた UART1 と接続されます。 +
 また Pin 2-3 間へ挿入することで、Versal HDIO にマッピングされた UART1 (EMIO)へ接続されます。 +
@@ -79,7 +79,7 @@ image::JP22.svg[JP22.svg]
 |===
 NOTE: VDD : Power / RXD : Input / TXD: Output
 
-=== IGLOO2 Telemetry/Telecommand セレクタ (JP25~JP29)
+== IGLOO2 Telemetry/Telecommand セレクタ (JP25~JP29)
 JP25~JP29 は、IGLOO2 の UART の接続先の切り替えが可能なインタフェースです。 +
 IGLOO2 の UART にアクセスすることで、OBC からの Telemetry 信号によるモニタや、OBC への Telecommand 信号によるモード変更が可能となります。 +
 ジャンパーソケットを Pin 1-2 間へ挿入すると、FTDI IC の Channel. D と接続され、CON6 (USB Type.C) からアクセスが可能となります。 +
@@ -100,7 +100,7 @@ image::JP25.svg[JP25.svg]
 |===
 NOTE: VDD : Power / RXD, RX, D : Input / TXD, TX, R : Output
 
-=== RS-422/RS-485 通信設定セレクタ (JP30~JP33)
+== RS-422/RS-485 通信設定セレクタ (JP30~JP33)
 JP30~JP33 は、CON18 に RS-422/RS-485 の規格に対応したデバイスを接続して OBC と通信する際に設定するインタフェースです。 +
 ジャンパーソケットは下表を参考に、対応するデバイスに合わせた設定にしてください。 +
 デフォルトは JP31 にジャンパーソケットが挿入されています。
@@ -121,14 +121,14 @@ Receiver を終端する場合はジャンパーソケットを挿入してく�
 |===
 NOTE: 半二重での通信で終端する場合は、JP30 または JP31 のどちらかへジャンパーソケットを挿入してください。
 
-=== Versal GTYP セレクタ (JP34)
+== Versal GTYP セレクタ (JP34)
 JP34 は Versal の高速シリアル通信信号である GTYP の接続先の切り替えが可能なインタフェースです。 +
 CON6 (USB Type.C) を利用して SmartLynq+ モジュールによる Versal の高速デバックおよびトレースを行いたい場合は、ジャンパーソケットを挿入してください。 +
 上記を行わず、CON11 に接続した FMC モジュールで対象の GTYP を評価を行いたい場合は、ジャンパーソケットを挿入しないでください。
 
 image::JP34.svg[JP34.svg]
 
-=== Versal I2C セレクタ (JP35~JP37)
+== Versal I2C セレクタ (JP35~JP37)
 JP35~JP37 は、I2C0 にマッピングされた Versal LPD MIO を、FMC モジュールで使用したい場合に使用するインタフェースです。 +
 FMC モジュールで使用したい場合、ジャンパーソケットを挿入してください。 +
 Versal LPD MIO がレベルシフタ (IC24) を介して、CON11 に接続した FMC モジュールへ接続されます。 +
@@ -137,7 +137,7 @@ JP35~JP37 へはデフォルトで 2 x 3 サイズのジャンパーソケット
 
 image::JP35.svg[JP35.svg]
 
-=== Versal Bank 502 電源セレクタ (JP38~JP41)
+== Versal Bank 502 電源セレクタ (JP38~JP41)
 JP38~JP41 は、Versal LPD MIO の電源ドメインを切り替えることが可能なインタフェースです。 +
 デフォルトは JP40 の電源が選択されています。 +
 電源の割り当ては下表を参照してください。 +
@@ -155,7 +155,7 @@ image::JP38.svg[JP38.svg]
 |JP41 |VDD_1V2_M |OBC で生成された +1.2V 電源。約 0.5A の電流制限あり。
 |===
 
-=== Versal CAN セレクタ (JP42~JP44)
+== Versal CAN セレクタ (JP42~JP44)
 JP42~JP44 は、CON19 を利用して Versal と CAN 通信がしたい場合に使用するインタフェースです。 +
 CON19 に CAN 対応デバイスを接続して Versal と通信したい場合は、ジャンパーソケットを挿入してください。 +
 ただし、ここで使用している Versal LPD MIO は CON12 にも分岐しているため注意が必要です。 +
@@ -163,14 +163,14 @@ JP42~JP44 へはデフォルトで 2 x 3 サイズのジャンパーソケット
 
 image::JP42.svg[JP42.svg]
 
-=== Versal CAN 終端セレクタ (JP45~JP46)
+== Versal CAN 終端セレクタ (JP45~JP46)
 JP45~JP46 は CAN の終端抵抗の有無を選択できるインタフェースです。 +
 CAN の終端抵抗が必要な場合は、ジャンパーソケットを挿入してください。 +
 デフォルトは 1 x 2 サイズのジャンパーソケット 2個が挿入されています。
 
 image::JP45.svg[JP45.svg]
 
-=== Versal MIO 通信方向セレクタ (JP47~JP48)
+== Versal MIO 通信方向セレクタ (JP47~JP48)
 JP47~JP48 は、CON12 に接続されている Versal PMC MIO 0 および Versal PMC MIO 1 の通信方向に合わせて設定するインタフェースです。 +
 対象の MIO は CON12 までの間にレベルシフタ (IC27) を介しているため、MIO の通信方向に従ってレベルシフタの通信方向を設定する必要があります。 +
 下表に、ジャンパーソケットを挿入または抜去した場合の、CON12 から見た入出力の方向を示します。 +
@@ -187,7 +187,7 @@ image::JP47.svg[JP47.svg]
 |抜去 |Input
 |===
 
-=== Versal Bank 302 電源セレクタ (JP49~JP52)
+== Versal Bank 302 電源セレクタ (JP49~JP52)
 JP49~JP52 は、Versal HDIO の電源ドメインを切り替えることが可能なインタフェースです。 +
 デフォルトは JP49 の電源が選択されています。 +
 電源の割り当ては下表を参照してください。 +
@@ -204,7 +204,7 @@ image::JP49.svg[JP49.svg]
 |JP52 |VDD_1V2_M |OBC で生成された +1.2V 電源。約 0.5A の電流制限あり。
 |===
 
-=== IGLOO2 Bank 5 電源セレクタ (JP53~JP56)
+== IGLOO2 Bank 5 電源セレクタ (JP53~JP56)
 JP53~JP56 は、IGLOO2 MSIO (Bank 5) の電源ドメインを切り替えることが可能なインタフェースです。 +
 デフォルトは JP53 の電源が選択されています。 +
 電源の割り当ては下表を参照してください。 +
@@ -221,7 +221,7 @@ image::JP53.svg[JP53.svg]
 |JP56 |VDD_1V2_M |OBC で生成された +1.2V 電源。約 0.5A の電流制限あり。
 |===
 
-=== FMC モジュール I/O電圧セレクタ (JP57~JP58)
+== FMC モジュール I/O電圧セレクタ (JP57~JP58)
 JP57~JP58 は、FMC モジュールに接続される Versal XPIO および IGLOO2 MSIO (Bank 8) の電源ドメインを選択できるインタフェースです。 +
 CON11 の VADJ 端子へも同様に供給されるため、ここで選択した電源ドメインで通信が可能となります。 +
 他の電源セレクタと異なり、Switching Regulator の Feedback 抵抗を変化させることで電圧を変化させているため、JP57 と JP58 の両方にジャンパーソケットを挿入した場合、意図しない電圧となることに注意が必要です。 +

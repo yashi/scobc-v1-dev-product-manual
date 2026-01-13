@@ -2,12 +2,12 @@
 
 = SC-OBC Module V1 Development Board Product Manual
 
-include::intro.adoc[]
+include::intro.adoc[leveloffset=+1]
 
-include::terms.adoc[]
+include::terms.adoc[leveloffset=+1]
 
-include::interface-spec.adoc[]
+include::interface-spec.adoc[leveloffset=+1]
 
-include::interface-layout.adoc[]
+include::interface-layout.adoc[leveloffset=+1]
 
-include::jumper-default.adoc[]
+include::jumper-default.adoc[leveloffset=+1]
