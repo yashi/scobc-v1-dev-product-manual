@@ -3,11 +3,3 @@
 = SC-OBC Module V1 Development Board Product Manual
 
 include::intro.adoc[leveloffset=+1]
-
-include::terms.adoc[leveloffset=+1]
-
-include::interface-spec.adoc[leveloffset=+1]
-
-include::interface-layout.adoc[leveloffset=+1]
-
-include::jumper-default.adoc[leveloffset=+1]
