@@ -1,6 +1,2 @@
-name: scobc-v1-dev-product-manual
-title: SC-OBC Module V1 Development Board Product Manual
+name: scobc-v1
 version: "latest"
-start_page: index.adoc
-nav:
-  - modules/ROOT/nav.adoc
