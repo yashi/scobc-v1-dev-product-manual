@@ -1,5 +1,0 @@
-:sectnums:
-
-= SC-OBC Module V1 Development Board Product Manual
-
-include::intro.adoc[leveloffset=+1]
