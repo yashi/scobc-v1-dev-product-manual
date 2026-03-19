@@ -4,7 +4,7 @@ image::interface-layout-sw.webp[Interface_Layout1.svg]
 
 [width="100%",cols="1,3,3,1",options="header",]
 |===
-|部品番号 |インターフェース名称 |形状 |備考
+|Part Number |Interface Name |Form Factor |Remarks
 |SW1 |Versal 起動モード制御スイッチ |DIPスイッチ (4ポジション) |
 |SW2 |Versal POR 制御スイッチ |タクトスイッチ |工場出荷用途
 |SW3 |IGLOO2 POR 制御スイッチ |タクトスイッチ |工場出荷用途
@@ -16,7 +16,7 @@ SW1 は Versal の起動モードを制御するための DIP スイッチです
 
 [width="100%",cols="1,1,1,1,1",options="header",]
 |===
-|モード |ピン番号 |ピン名称 |I/O |電源グループ
+|Mode |Pin Number |Pin Name |I/O |Power Domain
 |MODE 0 |1, 8 |XCVE_MODE0 |Input |電源 (VDD_5V0_CM)
 |MODE 1 |2, 7 |XCVE_MODE1 |Input |電源 (VDD_5V0_CM)
 |MODE 2 |3, 6 |XCVE_MODE2 |Input |電源 (VDD_5V0_CM)

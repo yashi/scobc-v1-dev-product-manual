@@ -4,7 +4,7 @@ image::interface-layout-jp.webp[Interface_Layout2.svg]
 
 [width="100%",cols="1,3,3",options="header",]
 |===
-|部品番号 |インターフェース名称 |形状
+|Part Number |Interface Name |Form Factor
 |JP13~JP18 |Versal FPGA JTAG セレクタ |ピンヘッダ 18ピン (6ピン x 3列 / 2.54mm ピッチ)
 |JP19~JP21 |Versal APU/RPU Console (UART0) セレクタ |ピンヘッダ 9ピン (3ピン x 3列 / 2.54mm ピッチ)
 |JP22~JP24 |Versal APU/RPU Console (UART1) セレクタ |ピンヘッダ 9ピン (3ピン x 3列 / 2.54mm ピッチ)
@@ -31,7 +31,7 @@ image::JP13.svg[JP13.svg]
 
 [width="100%",cols="1,1,1,1,1",]
 |===
-.2+|REF 3+|ピン番号 .2+|I/O
+.2+|REF 3+|Pin Number .2+|I/O
 |1 |2 |3
 |JP13 |FTDI_JTAG_TMS |XCVE_JTAG_TMS |FMC_JTAG_TMS |Input
 |JP14 |FTDI_JTAG_TDI |XCVE_JTAG_TDI |FMC_JTAG_TDI |Input
@@ -52,7 +52,7 @@ image::JP19.svg[JP19.svg]
 
 [width="100%",cols="1,2,2,2",options="header",]
 |===
-|ピン名称 3+|ピン番号
+|Pin Name 3+|Pin Number
 |REF |1 |2 |3
 |JP19 |VDD_B502 |VDD_FTDI_BDBUS |VDD_B302
 |JP20 |LPD_MIO0_UART0_RXD |FTDI_BDBUS_TXD |HDIO_302_L8P_UART0_RXD
@@ -71,7 +71,7 @@ image::JP22.svg[JP22.svg]
 
 [width="100%",cols="1,2,2,2",options="header",]
 |===
-|ピン名称 3+|ピン番号
+|Pin Name 3+|Pin Number
 |REF |1 |2 |3
 |JP19 |VDD_B502 |VDD_FTDI_CDBUS |VDD_B302
 |JP20 |LPD_MIO5_UART1_RXD |FTDI_CDBUS_TXD |HDIO_302_L10P_UART1_RXD
@@ -90,7 +90,7 @@ image::JP25.svg[JP25.svg]
 
 [width="100%",cols="1,2,2,2",options="header",]
 |===
-|ピン名称 3+|ピン番号
+|Pin Name 3+|Pin Number
 |REF |1 |2 |3
 |JP25 |VDD_FTDI_DDBUS |VDD_1V8_M |VDD_RS422
 |JP26 |FTDI_DDBUS_TXD |M2GL_UART_RX |RS422_R
@@ -109,7 +109,7 @@ image::JP30.svg[JP30.svg]
 
 [width="100%",cols="1,7",options="header",]
 |===
-|REF |説明
+|REF |Description
 |JP30 |Driver の終端抵抗の有無を選択できるインタフェースです。 +
 Driver を終端する場合はジャンパーソケットを挿入してください。
 |JP31 |Receiver の終端抵抗の有無を選択できるインタフェースです。 +
@@ -148,7 +148,7 @@ image::JP38.svg[JP38.svg]
 
 [width="100%",cols="1,1,3",options="header",]
 |===
-|REF |ピン名称 |説明
+|REF |Pin Name |Description
 |JP38 |VDD_3V3_C |Dev Board の主電源から生成される +3.3V 電源
 |JP39 |VDD_3V3_M |OBC で生成された +3.3V 電源
 |JP40 |VDD_1V8_M |OBC で生成された +1.8V 電源。約 0.5A の電流制限あり。
@@ -197,7 +197,7 @@ image::JP49.svg[JP49.svg]
 
 [width="100%",cols="1,1,4",options="header",]
 |===
-|REF |ピン名称 |説明
+|REF |Pin Name |Description
 |JP49 |VDD_3V3_C |Dev Board の主電源から生成される +3.3V 電源
 |JP50 |VDD_3V3_M |OBC で生成された +3.3V 電源
 |JP51 |VDD_1V8_M |OBC で生成された +1.8V 電源。約 0.5A の電流制限あり。
@@ -214,7 +214,7 @@ image::JP53.svg[JP53.svg]
 
 [width="100%",cols="1,1,4",options="header",]
 |===
-|REF |ピン名称 |説明
+|REF |Pin Name |Description
 |JP53 |VDD_3V3_C |Dev Board の主電源から生成される +3.3V 電源
 |JP54 |VDD_3V3_M |OBC で生成された +3.3V 電源
 |JP55 |VDD_1V8_M |OBC で生成された +1.8V 電源。約 0.5A の電流制限あり。
@@ -231,7 +231,7 @@ image::JP57.svg[JP57.svg]
 
 [width="50%",cols="1,1",options="header",]
 |===
-|REF |電源ドメイン
+|REF |Power Domain
 |JP57 |1.2V
 |JP58 |1.5V
 |===

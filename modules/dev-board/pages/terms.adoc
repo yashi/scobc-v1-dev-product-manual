@@ -2,7 +2,7 @@
 
 [width="100%",cols="1,3",options="header",]
 |===
-|用語 |説明
+|Term |Description
 |OBC |SC-OBC Module V1 を示す。
 |Dev Board |SC-OBC Module V1 Development Board を示す。
 |Versal |OBC の Main Processor である AMD 社製の Versal AI Edge Series VE2302 を示す。
